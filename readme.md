@@ -1,6 +1,8 @@
-# Serendipity
+# Serendipity (2014)
 
-This project was supported by Spotify during the first artist in residence program in 2014.
+[https://vimeo.com/293645693](https://vimeo.com/293645693)
+
+This project was supported by Spotify during the first artist in residence program in 2014. 
 
 Because the Spotify v1 API no longer allows lookups to the `track/` endpoint without an access token, to run this you must:
 
