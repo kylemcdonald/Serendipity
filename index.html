@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<title>Serendipity</title>
+<link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
+<link href='style/serendipity.css' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=.75, maximum-scale=.75, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+</head>
+
+<body>
+
+<div id="bg" class="layer fullsize">
+  <canvas id="cover"></canvas>
+</div>
+
+<canvas id="world" class="layer"></canvas>
+
+<div id="overlay" class="layer fullsize">
+  <svg id="labels" class="layer">
+    <circle class="impact" id="impact0"/>
+    <circle class="impact" id="impact1"/>
+    <circle class="point" id="point0" r="6px"/>
+    <circle class="point" id="point1" r="6px"/>
+  </svg>
+  <div class="centered-table layer" style="height:50%">
+    <div class="centered-cell">
+        <div id="info">
+          <div id="track"></div>
+          <div id="album"></div>
+          <div id="artists"></div>
+        </div>
+    </div>
+  </div>
+  <div id="cities" class="layer fullsize">
+    <div id="city0" class="city"></div>
+    <div id="city1" class="city"></div>
+  </div>
+</div>
+
+<div class="layer centered-table" id="splash">
+  <div class="centered-cell">
+    <h1 id="title">Serendipity</h1>
+  </div>
+</div>
+
+<div class="layer" id="menu">
+  <div id="icons">
+    <img src="images/play.png" style="display: none"/>
+    <img src="images/pause.png" id="playing-icon"/>
+    <img src="images/volume.png" id="volume-icon"/>
+  </div>
+  <div id="about">
+    <p>By <a href="http://twitter.com/kcimc">Kyle McDonald</a> in residence at <a href="https://spotify.com/arts/">Spotify</a>.</p>
+    <p>Every second, a few people hit "play" on the same track at the same time.</p>
+    <p id="cache-notice">The tracks shown here were recorded over one hour of one day.</p>
+    <div class="share-row">
+      <div class="share fb-like" data-href="http://spotify.com/arts/serendipity" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+      <div><a href="https://twitter.com/share" data-url="http://spotify.com/arts/serendipity" class="share twitter-share-button" data-via="spotify" data-text="When two people play the same song at the same time. #serendipity">Tweet</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+
+<script src="scripts/StackBlur.js"></script>
+<script src="scripts/serendipity.js"></script>
+
+</body>
+</html>
